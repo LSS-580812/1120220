@@ -16,6 +16,11 @@ namespace DelegateEx
         ///     建立委派物件實體時，必須要傳入符合委派規格的方法參考
         /// 3.使用 Invoke 方法調用委派。
         ///     如果要將新的方法的位置參考加入到委派物件的執行方法清單的話，必須透過 「+=」 關鍵字。
+        /// 
+        /// 教學資源：
+        /// 1.【阿空】C# 委派 Delegate 用途大解析！ ( C# Delegate)  https://www.youtube.com/watch?v=qeX96Dzx1fw
+        /// 2.[C#] 委派 (Delegate)    https://dotblogs.com.tw/atowngit/2009/12/07/12311
+        /// 
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
