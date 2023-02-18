@@ -21,7 +21,7 @@ namespace DelegateEx
         static void Main(string[] args)
         {
             useDelegate calX = new useDelegate();
-            calX.start();
+            calX.Start();
             Console.ReadLine();
         }
 
@@ -30,7 +30,7 @@ namespace DelegateEx
             public delegate int Calculate(int x, int y);
             public Calculate myCalculateFunction;
 
-            public void start()
+            public void Start()
             {
                 Console.WriteLine("委派調用方式一");
                 DoCalculate(5, 3, Add);
@@ -44,6 +44,14 @@ namespace DelegateEx
                 myCalculateFunction += Add;
                 myCalculateFunction += Sub;
                 myCalculateFunction(2, 3);
+            }
+
+            public void Stop()
+            {
+                Console.WriteLine("釋放");
+                myCalculateFunction -= Add;
+                myCalculateFunction -= Sub;
+
             }
 
             void DoCalculate(int x, int y, Calculate cal)
