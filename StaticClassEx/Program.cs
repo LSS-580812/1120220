@@ -22,7 +22,7 @@ namespace StaticClassEx
             */
             Class1.Execute();
 
-            List<string> source = new List<string> { "Bill", "John", "David", "Tom", "David" };
+            IEnumerable<string> source = new List<string> { "Bill", "John", "David", "Tom", "David" };
             var result = source.DoWhere((x) => x == "David");
             // 其實它原來應該是這樣寫
             // var result = MyClass.DoWhere(source, ((x) => x == "David"));
@@ -31,6 +31,29 @@ namespace StaticClassEx
                 Console.WriteLine(item);
             }
 
+
+            IEnumerable<string> source1 = new List<string> { "Bill", "John", "David", "Tom", "David" };
+            var result1 = source1.MySelect((x) => x == "David");
+            // 其實它原來應該是這樣寫
+            // var result = MyClass.DoWhere(source, ((x) => x == "David"));
+            foreach (var item in result1)
+            {
+                Console.WriteLine(item);
+            }
+
+            
+            
+
+            /*
+            List<string> source = new List<string> { "Bill", "John", "David", "Tom", "David" };
+            var result = source.DoWhere((x) => x == "David");
+            // 其實它原來應該是這樣寫
+            // var result = MyClass.DoWhere(source, ((x) => x == "David"));
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            */
 
 
             Console.ReadLine();
